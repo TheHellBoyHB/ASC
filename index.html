@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Another Simple Chat</title>
+			<style type="text/css">
+				html,
+				body {
+					color: white;
+					font-family: Arial;
+					margin: 0;
+				}
+				header {
+					background-color: white;
+					height: 12%;
+					position: fixed;
+					top: 0%;
+					width: 100%;    
+				}
+				.chat-list {
+					background-color: blue;
+					bottom: 0;
+					height: 88%;
+					position: fixed;
+					right: 0;
+					width: 25%;
+				}
+				.chat-list ul{
+					margin: 0;
+					padding: 0;
+				}
+				.chat-container {
+					background-color: black;
+					bottom: 0;
+					height: 88%;
+					position: fixed;
+					width: 75%; 
+				}
+				footer{
+					background-color: white;
+					bottom: 0;
+					color: black;
+					height: 20px;
+					left: 0px;
+					position: absolute;
+					transition: height 1s;
+					width: 100%;
+				}
+				footer:hover{
+					background-color: white;
+					bottom: 0;
+					color: black;
+					height: 200px;
+					left: 0;
+					position: absolute;
+					width: 100%;
+
+				}
+				footer img{
+					visibility: hidden;
+					margin-left: 14%;
+					opacity: 0;
+					transition: visibility 2s, opacity 2s linear;
+				}
+				footer:hover img{
+					visibility: visible;
+					margin-left: 14%;
+					opacity: 1;
+				}
+				h2{
+					display: inline-block;
+					float: left;
+					font-family: Verdana;
+					margin-left: 20px;
+				}
+				button{
+					border-radius: 7px;
+					display: inline-block;
+					float: right;
+					font-size: 25px;
+					margin-right: 20px;
+					margin-top: 20px;
+					width: 150px;
+				}
+				li{
+					border: 5px solid black;
+					color: white;
+					display: inline-block;
+					font-family: Impact;
+					font-size: 25px;
+					height: 30px;
+					width: 100%;
+				}
+				li:hover{
+					background-color: white;
+					color: black;
+				}
+				input[type="text"]{
+					bottom: 0;
+					font-family: Comic Sans MS;
+					height: 50px;
+					position: absolute;
+					width: 85%;
+				}
+				.send{
+					border-radius: 0;
+					bottom: 26px;
+					font-family: Arial;
+					font-size: 20px;
+					height: 30px;
+					margin-right: 0;
+					position: absolute;
+					right: 0;
+					width: 14.5%;	
+				}
+				input[type="checkbox"]{
+					background-color: white;
+					bottom: 3.5px;
+					color: black;
+					position: absolute;
+					right: 120px;
+				}
+				label{
+					bottom: 4px;
+					position: absolute;
+					right: 6px;
+				}
+				h5{
+					position: absolute;
+				}				}
+				h6{
+					color: white;
+					position: absolute;
+				}
+				.logo{
+					float: left;
+					height: 99%;
+				}
+				
+				.logout{
+					background-color: red;
+					border: 1px solid black;
+				}
+				.gear{
+					background-color: white;
+					border: solid 3px blue;
+					float: right;
+					height: 50px;
+					right: 0;
+					top: 0;
+					width: 50px;
+				}
+				.chat-add{
+					border: solid 3px blue;
+					float: right;
+					height: 50px;
+					right: 0;
+					top: 20px;
+					width: 50px;
+				}
+				.chat-add-list:focus li{
+					display: list-item;
+				}
+				.chat-container ul{
+					margin: 0;
+					position: relative;
+				}
+				.chat-container ul li{
+					position: absolute;
+					right: 0;
+					top: 55px;
+				}
+				.private{
+					background-color: red;
+					color: black;
+					display: none;
+					font-family: Arial;
+					height: 30px;
+					width: 285px;
+				}
+				.group{
+					background-color: orange;
+					color: black;
+					display: none;
+					font-family: Arial;
+					height: 30px;
+					margin-top: 33px;
+					width: 285px;
+				}
+				.chat-add-list li{
+					border: 4px solid blue;
+					border-radius: 10px;
+				}
+			</style>
+		</head>
+		<body>
+			<header>
+				<img class="logo" src="output_zjbMuh.gif">
+				<button class="logout">Login<	/button>
+			</header>
+
+			<div class="chat-list">
+				<ul>
+					<li>Global chat</li>
+					<li>John Doe</li>
+					<li>TheCodersOradea</li>
+				</ul>
+				<footer>
+					&copy; TheCoders Elite Oradea. All rights reserved.
+					<img src="logo_dojot.gif">
+				</footer>
+			</div>
+
+			<div class="chat-container">
+				<ul class="chat-add-list" tabindex="0">
+					<img class="chat-add" src="ecsdi.png">
+					<li class="private">CREATE PRIVATE CHAT</li>
+					<li class="group">CREATE GROUP CHAT</li>
+				</ul>
+				<img class="gear" src="1-250x250.png">
+				<p>John Doe: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p>Me: Etiam quis ornare neque.</p>
+				<p>John Doe: Praesent rhoncus leo.</p>
+				<input type="text" placeholder="Enter your message here."/>
+				<button class="send">Send</button>
+				<input id="send-with-enter" type="checkbox"><label for="send-with-enter">Send with Enter</label>
+			</div>
+		</body>
+	</html>
