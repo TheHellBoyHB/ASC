@@ -1,0 +1,31 @@
+footer{
+	background-color: white;
+	bottom: 0;
+	color: black;
+	height: 20px;
+	left: 0px;
+	position: absolute;
+	transition: height 1s;
+	width: 100%;
+}
+footer:hover{
+	background-color: white;
+	bottom: 0;
+	color: black;
+	height: 200px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+
+}
+footer img{
+	visibility: hidden;
+	margin-left: 14%;
+	opacity: 0;
+	transition: visibility 2s, opacity 2s linear;
+}
+footer:hover img{
+	visibility: visible;
+	margin-left: 14%;
+	opacity: 1;
+}
