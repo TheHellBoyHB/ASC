@@ -149,3 +149,7 @@ h6{
 	border: 4px solid blue;
 	border-radius: 10px;
 }
+#message_box {
+	overflow-y: scroll;
+	height:88%;
+}
