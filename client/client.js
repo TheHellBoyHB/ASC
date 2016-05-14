@@ -1,13 +1,13 @@
 $(document).ready(function(){
 	//create a new WebSocket object.
-	var wsUri = "ws://192.168.0.109:8778/server.php"; 	
+	var wsUri = "ws://192.168.0.120:8778/server.php"; 	
 	websocket = new WebSocket(wsUri); 
 	
 	websocket.onopen = function(ev) { // connection is open 
 		$('#message_box').append("<div class=\"system_msg\">Connected!</div>"); //notify user
 	}
 
-	$('#send-btn').click(function(){ //use clicks message send button	
+	function SendMessage(){ //use clicks message send button	
 		var mymessage = $('#message').val(); //get message text
 		var myname = $('#name').val(); //get user name
 		
@@ -28,6 +28,14 @@ $(document).ready(function(){
 		};
 		//convert and send data to server
 		websocket.send(JSON.stringify(msg));
+	}
+
+	$('#send-btn').on("click", SendMessage);
+
+	$('#message').on("keypress", function(e) {
+		if(e.keyCode == 13 && $('#message').val() != ""){
+			SendMessage();
+		}
 	});
 	
 	//#### Message received from server?
@@ -52,4 +60,8 @@ $(document).ready(function(){
 	
 	websocket.onerror	= function(ev){$('#message_box').append("<div class=\"system_error\">Error Occurred - "+ev.data+"</div>");}; 
 	websocket.onclose 	= function(ev){$('#message_box').append("<div class=\"system_msg\">Connection Closed</div>");}; 
+
 });
+	
+	
+		
