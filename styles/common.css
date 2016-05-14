@@ -108,6 +108,16 @@ h6{
 	top: 0;
 	width: 50px;
 }
+
+.faq{
+	background-color: white;
+	border: solid 3px blue;
+	float: right;
+	right: 0
+	top: 0;
+	width: 50px;
+}
+
 .chat-add{
 	border: solid 3px blue;
 	float: right;
@@ -152,4 +162,16 @@ h6{
 #message_box {
 	overflow-y: scroll;
 	height:88%;
+}
+
+#send-btn{
+	border-radius: 0;
+	bottom: 5%;
+	font-family: Arial;
+	font-size: 20px;
+	height: 5%;
+	margin-right:0;
+	position: absolute;
+	right: 0;
+	width: 14.5%;
 }
