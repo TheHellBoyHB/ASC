@@ -165,11 +165,13 @@ h6{
 }
 
 #send-btn{
+	background-color: orange;
+	border: 1px solid black;
 	border-radius: 0;
-	bottom: 5%;
+	bottom: 4%;
 	font-family: Arial;
 	font-size: 20px;
-	height: 5%;
+	height: 4.75%;
 	margin-right:0;
 	position: absolute;
 	right: 0;
