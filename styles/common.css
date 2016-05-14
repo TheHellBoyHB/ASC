@@ -160,7 +160,7 @@ h6{
 	border-radius: 10px;
 }
 #message_box {
-	overflow-y: scroll;
+	overflow-y: auto;
 	height:88%;
 }
 
