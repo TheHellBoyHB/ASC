@@ -161,12 +161,14 @@ h6{
 }
 #message_box {
 	overflow-y: scroll;
-	height:88%;
+	height:92%;
 }
 
 #send-btn{
+	background-color: orange;
+	border: 1px solid black;
 	border-radius: 0;
-	bottom: 5%;
+	bottom: 4%;
 	font-family: Arial;
 	font-size: 20px;
 	height: 5%;
