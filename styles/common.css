@@ -17,7 +17,7 @@ body.activated .chat-list {
 	right:0;
 }
 body .chat-list {
-	background-color: blue;
+	background-color: #f4f4f4	;
 	bottom: 0;
 	height: 88%;
 	position: fixed;
@@ -53,13 +53,14 @@ button{
 	width: 150px;
 }
 li{
-	border: 5px solid black;
-	color: white;
+	color: black;
 	display: inline-block;
 	font-family: Impact;
 	font-size: 25px;
 	height: 30px;
 	width: 100%;
+	text-align:center;
+	box-shadow:  1px 1px  4px 3px rgba(0,0,0,0.20); 
 }
 li:hover{
 	background-color: white;
@@ -114,7 +115,7 @@ h6{
 
 #logo-txt {
 	font-size: 40px;
-	color:blue;
+	color: white;
 	margin-top:12px;
 	text-align:center;
 	font-family: Impact;
@@ -124,7 +125,7 @@ h6{
 
 .gear{
 	background-color: white;
-	border: solid 3px blue;
+	display: none;
 	float: right;
 	height: 50px;
 	right: 0;
@@ -133,8 +134,7 @@ h6{
 }
 
 .faq{
-	background-color: white;
-	border: solid 3px blue;
+	display:none;
 	float: right;
 	right: 0
 	top: 0;
@@ -142,24 +142,29 @@ h6{
 }
 
 .chat-add{
-	border: solid 3px blue;
+	display:none;
 	float: right;
 	height: 50px;
 	right: 0;
 	top: 20px;
 	width: 50px;
 }
+
+.reveal {
+	height:50px;
+	width:50px;
+	float:right;
+	position:relative;
+}
+
 .chat-add-list:focus li{
 	display: list-item;
 }
 .chat-container ul{
-	margin: 0;
 	position: relative;
 }
 .chat-container ul li{
 	position: absolute;
-	right: 0;
-	top: 55px;
 }
 .private{
 	background-color: red;
@@ -184,13 +189,13 @@ h6{
 }
 #message_box  {
 	overflow-y: auto;
-	height:88%;
+	height:91%;
 }
 
 #send-btn{
 	background-color: orange;
-	border: 1px solid black;
-	border-radius: 0;
+	border: 0px solid black;
+	border-radius:0%;
 	bottom: 4.75%;
 	font-family: Arial;
 	font-size: 20px;
@@ -199,5 +204,6 @@ h6{
 	position: absolute;
 	right: 0;
 	width: 14.5%;
+	margin-top:0;
 }
-		
+	
