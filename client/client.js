@@ -9,6 +9,7 @@ $(document).ready(function(){
 
 	function SendMessage(){ //use clicks message send button	
 		var mymessage = $('#message').val(); //get message text
+		$('#message').val(''); //reset text
 		var myname = $('#name').val(); //get user name
 		
 		if(myname == ""){ //empty name?
@@ -31,12 +32,15 @@ $(document).ready(function(){
 	}
 
 	$('#send-btn').on("click", SendMessage);
-
-	$('#message').on("keypress", function(e) {
-		if(e.keyCode == 13 && $('#message').val() != ""){
-			SendMessage();
+	while(true) {
+		if(document.getElementByid('send-with-enter').checked) {
+			$('#message').on("keypress", function(e) {
+				if(e.keyCode == 13 && $('#message').val() != ""){
+					SendMessage();
+				}
+			});
 		}
-	});
+	}	
 	
 	//#### Message received from server?
 	websocket.onmessage = function(ev) {
@@ -55,7 +59,6 @@ $(document).ready(function(){
 			$('#message_box').append("<div class=\"system_msg\">"+umsg+"</div>");
 		}
 		
-		$('#message').val(''); //reset text
 	};
 	
 	websocket.onerror	= function(ev){$('#message_box').append("<div class=\"system_error\">Error Occurred - "+ev.data+"</div>");}; 
