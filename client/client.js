@@ -9,7 +9,6 @@ $(document).ready(function(){
 
 	function SendMessage(){ //use clicks message send button	
 		var mymessage = $('#message').val(); //get message text
-		$('#message').val(''); //reset text
 		var myname = $('#name').val(); //get user name
 		
 		if(myname == ""){ //empty name?
@@ -29,18 +28,15 @@ $(document).ready(function(){
 		};
 		//convert and send data to server
 		websocket.send(JSON.stringify(msg));
+		$('#message').val(''); //reset text
 	}
 
 	$('#send-btn').on("click", SendMessage);
-	while(true) {
-		if(document.getElementByid('send-with-enter').checked) {
-			$('#message').on("keypress", function(e) {
-				if(e.keyCode == 13 && $('#message').val() != ""){
-					SendMessage();
-				}
-			});
+	$('#message').on("keypress", function(e) {
+		if(e.keyCode == 13 && $('#message').val() != ""){
+			SendMessage();
 		}
-	}	
+	});
 	
 	//#### Message received from server?
 	websocket.onmessage = function(ev) {
